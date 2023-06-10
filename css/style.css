@@ -1,0 +1,128 @@
+@charset "utf-8";@font-face {
+    font-family: "plantc";
+    src: url("/fonts/plantc.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Source Han Serif";
+    src: url("/fonts/SourceHanSerifCN-SemiBold.woff2") format("woff2"), url("/fonts/SourceHanSerifCN-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "plantc", serif;
+    overflow-x: hidden;
+    background-color: #f6f8fe;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body:lang(zh) {
+    font-family: "plantc", "Source Han Serif", serif;
+}
+
+.en {
+    position: absolute;
+    top: 2rem;
+    bottom: auto;
+    left: auto;
+    right: 4rem;
+}
+
+.en a {
+    color: #000;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.intro {
+    margin: 6rem 0;
+    font-size: 4rem;
+    color: #1787e0;
+}
+
+.more {
+    display: flex;
+    justify-content: space-between;
+}
+
+.more .social {
+    width: 800px;
+}
+
+.title {
+    font-size: 1.8rem;
+    line-height: 4rem;
+}
+
+.link ul li {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+}
+
+.link ul li a {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 1em 0 1em 0.4rem;
+    transition: .2s ease-out;
+    color: #000;
+    font-size: 1.2rem;
+    transition: .2s ease-out;
+}
+
+.link ul li a:hover {
+    padding-left: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 1px rgb(0, 0, 0, 0.1);
+    border-bottom: 1px solid #f6f8fe;
+}
+
+.more .wx {
+    width: 380px;
+    border-left: 1px solid #ddd;
+    padding-left: 3rem;
+}
+
+.wx .images {
+    width: 150px;
+}
+
+.wx .images {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+footer {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background-color: #1787e0;
+}
