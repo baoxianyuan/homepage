@@ -12,17 +12,23 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "SHserif";
+    src: url("/fonts/SourceHanSerifCN-SemiBold-7.otf") format("opentype");
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
-html {
-    font-size: 15px;
+:root {
+    --black:#000
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 li {
@@ -30,99 +36,154 @@ li {
 }
 
 body {
-    font-family: "plantc", serif;
-    overflow-x: hidden;
-    background-color: #f6f8fe;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-image: url('/images/paper_fibers.png');
+    padding: 2rem 1rem;
+    font-family: "plantc", serif !important;
 }
 
 body:lang(zh) {
-    font-family: "plantc", "Source Han Serif", serif;
+    /* font-family: "plantc", "Source Han Serif", serif !important; */
+    font-family: "plantc", "SHserif", serif !important;
 }
 
-.en {
-    position: absolute;
-    top: 2rem;
-    bottom: auto;
-    left: auto;
-    right: 4rem;
-}
-
-.en a {
-    color: #000;
-}
-
-.inner {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.intro {
-    margin: 6rem 0;
-    font-size: 4rem;
-    color: #1787e0;
-}
-
-.more {
+header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.more .social {
-    width: 800px;
+header .logo {
+    height: 10rem;
+    margin-left: 0.5rem;
 }
 
-.title {
-    font-size: 1.8rem;
-    line-height: 4rem;
+header .logo img {
+    height: 100%;
 }
 
-.link ul li {
-    display: inline-block;
-    width: 350px;
-    margin-right: 20px;
+.p_box {
+    border: 2px solid var(--black);
+    padding: 3px;
+    margin-right: 0.5rem;
+    width: 24rem;
 }
 
-.link ul li a {
-    display: block;
-    border-bottom: 1px solid #ddd;
-    padding: 1em 0 1em 0.4rem;
-    transition: .2s ease-out;
-    color: #000;
+.p_box > div {
+    border: 1px solid var(--black);
+    padding: 0.6rem 1rem;
+    text-align: right;
+}
+
+.p_box p {
+    text-indent: 2em;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.p_box span {
+    line-height: 2.0rem;
+}
+
+.aside {
+    border: solid var(--black);
+    border-width: 2px 0;
+    padding: 3px 0;
+}
+
+.aside > div {
+    border: solid var(--black);
+    border-width: 1px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    padding: 0 4px;
+}
+
+.aside .msg p {
+    font-size: 1.1rem;
+    line-height: 2.6rem;
+    margin-bottom: 0;
+}
+
+.aside .time_box {
     font-size: 1.2rem;
-    transition: .2s ease-out;
 }
 
-.link ul li a:hover {
-    padding-left: 1rem;
+.aside .time_box .date {
+    text-align: center;
+    line-height: 2.6rem;
+}
+
+/* .aside .social {
+    width: 40%;
+} */
+
+.aside .social ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 0;
+    margin-bottom: 0 !important;
+    text-align: center;
+}
+
+.aside .social ul li {
+    width: 3.4rem;
+    position: relative;
+}
+
+.aside .social ul li i {
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 2.6rem;
+}
+
+.aside .social .img_card {
+    width: 10rem;
     background-color: #fff;
-    box-shadow: 0 1px 5px 1px rgb(0, 0, 0, 0.1);
-    border-bottom: 1px solid #f6f8fe;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    position: absolute;
+    top: 4.9rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    /* overflow: hidden; */
+    box-shadow: 0 -10px 30px rgba(0,0,0,.1);
+    box-sizing: border-box;
+    padding: 1rem;
+    opacity: 0;
+    transition: all 0.4s ease-out 0s;
 }
 
-.more .wx {
-    width: 380px;
-    border-left: 1px solid #ddd;
-    padding-left: 3rem;
+.aside .social .img_card:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 0 16px 16px 16px;
+    border-color: transparent transparent #fff transparent;
 }
 
-.wx .images {
-    width: 150px;
+.aside .social .img_card.on {
+    top: 3.9rem;
+    opacity: 1;
 }
 
-.wx .images {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.aside .social .img_card img {
+    width: 100%;
+}
+
+main {
+    height: 390px;
+    padding: 1rem 5px;
 }
 
 footer {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1rem;
-    background-color: #1787e0;
+    font-size: 1.1rem;
+    line-height: 2.6rem;
+    border-top: 2px solid #000;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    padding: 0 5px;
 }

@@ -1,0 +1,44 @@
+@media (max-width: 1200px) {
+    footer{
+        display: block;
+        line-height: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    footer > div {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .aside > div {
+        display: block;
+    }
+    .aside .msg {
+        text-align: center;
+    }
+    .aside .social ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+    header {
+        display: block;
+    }
+    header .logo {
+        height: 6rem;
+        margin-bottom: 1rem;
+    }
+    header .logo a {
+        height: 6rem;
+        display: block;
+        text-align: center;
+    }
+    header .p_box {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
